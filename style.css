@@ -1,0 +1,97 @@
+/* styles.css */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: url('pexels-janetrangdoan-1099680.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    background: rgba(189, 194, 197, 0.8); /* Semi-transparent background */
+    border-radius: 10px;
+}
+
+.card {
+    width: 250px;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    background-color: #fff;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card .card-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background: rgba(153, 156, 160, 0.8);
+    color: #ecf0f1;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.card:hover .card-content {
+    opacity: 1;
+}
+
+.card h2 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #ffd700;
+}
+
+.card p {
+    font-size: 1em;
+}
+
+.card .edit-btn, .card .delete-btn {
+    margin-top: 10px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.card .edit-btn {
+    background-color: #27ae60;
+    color: #fff;
+    margin-right: 10px;
+}
+
+.card .delete-btn {
+    background-color: #c0392b;
+    color: #fff;
+}
+
+.card .edit-btn:hover {
+    background-color: #2ecc71;
+}
+
+.card .delete-btn:hover {
+    background-color: #e74c3c;
+}
